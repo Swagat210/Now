@@ -36,7 +36,7 @@ REFERAL_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds
 REFFER_POINT = int(environ.get('USER_POINT', "50")) # Set Referel point Count 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '100')
-PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium)
+PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 # lock file, set file limit 
 FILE_LIMITE = int(environ.get('FILE_LIMITE', 15))
 SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 3))
